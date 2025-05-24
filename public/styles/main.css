@@ -68,7 +68,8 @@ body {
 .stat {
   text-align: center;
   font-size: 2rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
 }
 .stat h2 {
   position: relative;
@@ -77,12 +78,14 @@ body {
 
 .para {
   font-size: 1.8rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Libre Baskerville", serif;
   display: flex;
   justify-content: center;
   padding-left: 20px;
   padding-right: 20px;
   align-items: center;
+  font-weight: 400;
+  font-style: italic;
 }
 .para p {
   position: relative;
@@ -90,13 +93,19 @@ body {
 }
 .create_btn,
 .post_btn {
-  border: solid 2px black;
+  border: solid 2px white;
   height: fit-content;
-  padding: 10px;
+  padding: 15px;
+  margin: 20px;
   border-radius: 5%;
   background-color: transparent;
   box-shadow: 6px 6px 4px black;
   transition: all 0.3s ease-in-out;
+}
+.btn{
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: bold;
 }
 .create_btn:active {
   transform: scale(0.97);
@@ -115,7 +124,7 @@ body {
 }
 .create_btn:hover,
 .post_btn:hover {
-  box-shadow: 4px 4px 8px rgb(251, 251, 251);
+  box-shadow: 4px 4px 2px rgba(251, 251, 251, 0.684);
 }
 @media (min-width:300px) and (max-width:600px)
 {
@@ -145,7 +154,6 @@ body {
     top: 95%;
   }
   .bottom_text {
-    font-family: "Playfair Display", serif;
     padding-left: 2%;
     opacity: 0.7;
     font-size: 0.7rem;
@@ -165,7 +173,6 @@ body {
   }
   .title {
     font-size: 1.8rem;
-    font-family: "Playfair Display", serif;
   }
   .title h1 {
     position: relative;
@@ -174,7 +181,6 @@ body {
   .stat {
     text-align: center;
     font-size: 1.1rem;
-    font-family: "Open Sans", sans-serif;
   }
   .stat h2 {
     position: relative;
@@ -183,7 +189,6 @@ body {
 
   .para {
     font-size: 1.1rem;
-    font-family: "Open Sans", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,7 +221,7 @@ body {
     color: black;
     font-weight: 800;
     font-size: 1.1rem;
-    transition: all 0.3s ease-in-out;
+    transition: none;
   }
   .create_btn:hover,
   .post_btn:hover {
@@ -251,7 +256,6 @@ body {
     top: 95%;
   }
   .bottom_text {
-    font-family: "Playfair Display", serif;
     padding-left: 2%;
     opacity: 0.7;
     font-size: 0.7rem;
@@ -271,7 +275,6 @@ body {
   }
   .title {
     font-size: 1.6rem;
-    font-family: "Playfair Display", serif;
   }
   .title h1 {
     position: relative;
@@ -280,7 +283,6 @@ body {
   .stat {
     text-align: center;
     font-size: 1rem;
-    font-family: "Open Sans", sans-serif;
   }
   .stat h2 {
     position: relative;
@@ -291,7 +293,6 @@ body {
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
     display: flex;
-
     justify-content: center;
     align-items: center;
     padding: 0px;
@@ -309,7 +310,7 @@ body {
     border-radius: 5%;
     background-color: transparent;
     box-shadow: 6px 6px 4px black;
-    transition: all 0.3s ease-in-out;
+    transition: none;
   }
   .create_btn:active {
     transform: none;
@@ -324,7 +325,7 @@ body {
     color: black;
     font-weight: 800;
     font-size: 1rem;
-    transition: all 0.3s ease-in-out;
+    transition: none;
   }
   .create_btn:hover,
   .post_btn:hover {
