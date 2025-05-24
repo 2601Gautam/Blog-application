@@ -215,8 +215,8 @@ body {
     box-shadow: 6px 6px 4px black;
   }
   .post_btn:active {
-    box-shadow:none;
-    transform: 6px 6px 4px black;
+    box-shadow:6px 6px 4px black;
+    transform: none;
   }
   .btns a {
     text-decoration: none;
@@ -227,7 +227,7 @@ body {
   }
   .create_btn:hover,
   .post_btn:hover {
-    box-shadow: none;
+    box-shadow: 6px 6px 4px black;
   }
 }
 
@@ -302,7 +302,7 @@ body {
   .para p {
     position: relative;
     text-align: justify;
-    top: -5%;
+    top: -10%;
   }
   .create_btn,
   .post_btn {
@@ -319,8 +319,8 @@ body {
     box-shadow: 6px 6px 4px black;
   }
   .post_btn:active {
-    box-shadow:none;
-    transform:6px 6px 4px black;
+    box-shadow:6px 6px 4px black;
+    transform:none;
   }
   .btns a {
     text-decoration: none;
@@ -331,6 +331,6 @@ body {
   }
   .create_btn:hover,
   .post_btn:hover {
-    box-shadow: none;
+    box-shadow: 6px 6px 4px black;
   }
 }
