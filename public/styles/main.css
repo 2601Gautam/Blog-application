@@ -298,6 +298,7 @@ body {
   }
   .para p {
     position: relative;
+    text-align: justify;
     top: -5%;
   }
   .create_btn,
