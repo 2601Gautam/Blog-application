@@ -212,11 +212,11 @@ body {
   }
   .create_btn:active {
     transform: none;
-    box-shadow: none;
+    box-shadow: 6px 6px 4px black;
   }
   .post_btn:active {
     box-shadow:none;
-    transform: none;
+    transform: 6px 6px 4px black;
   }
   .btns a {
     text-decoration: none;
@@ -316,11 +316,11 @@ body {
   }
   .create_btn:active {
     transform: none;
-    box-shadow: none;
+    box-shadow: 6px 6px 4px black;
   }
   .post_btn:active {
     box-shadow:none;
-    transform: none;
+    transform:6px 6px 4px black;
   }
   .btns a {
     text-decoration: none;
