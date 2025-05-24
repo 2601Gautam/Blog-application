@@ -15,8 +15,7 @@ app.set('views', path.join(__dirname, 'views'));
 const users = {}; // Stores users in memory, using email as key
 //make instance of express
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
-//to store info of user that is loging
+app.use(express.static(path.join(__dirname, 'public')));//to store info of user that is loging
 app.use(
   session({
     secret: "yourSecretKey",
