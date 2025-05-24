@@ -1,0 +1,332 @@
+body {
+  background: radial-gradient(circle, #5290c9, #a1c8e3);
+}
+#navbar {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.navbar_div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+}
+.parts_nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* This makes the p tags stack vertically */
+  gap: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.parts_nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: 800;
+}
+.right_nav a {
+  opacity: 1;
+  transition: transform 0.3s ease-in-out;
+}
+.right_nav a:hover {
+  color: white;
+  text-shadow: 2px 2px 5px rgb(0, 183, 255);
+}
+.bottom {
+  position: fixed;
+  width: 100%;
+  top: 95%;
+}
+.bottom_text {
+  font-family: "Playfair Display", serif;
+  padding-left: 2%;
+  opacity: 0.7;
+}
+.main {
+  height: 80vh;
+  text-align: center;
+  width: 90%;
+  margin-left: 5%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1.5fr 1fr;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.title {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+}
+.title h1 {
+  position: relative;
+  top: 30%;
+}
+.stat {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+}
+.stat h2 {
+  position: relative;
+  top: 10%;
+}
+
+.para {
+  font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+}
+.para p {
+  position: relative;
+  top: -5%;
+}
+.create_btn,
+.post_btn {
+  border: solid 2px black;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 5%;
+  background-color: transparent;
+  box-shadow: 6px 6px 4px black;
+  transition: all 0.3s ease-in-out;
+}
+.create_btn:active {
+  transform: scale(0.97);
+  box-shadow: 6px 6px 4px white;
+}
+.post_btn:active {
+  box-shadow: 6px 6px 4px white;
+  transform: scale(0.97);
+}
+.btns a {
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+.create_btn:hover,
+.post_btn:hover {
+  box-shadow: 4px 4px 8px rgb(251, 251, 251);
+}
+@media (min-width:300px) and (max-width:600px)
+{
+  #navbar {
+    padding-left:0%;
+    padding-right: 0%;
+  }
+  .navbar_div {
+    font-size: 0.9rem;
+  }
+  
+  .parts_nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+  }
+  .right_nav a {
+    transition: none;
+  }
+  .right_nav a:hover {
+    color: black;
+    text-shadow: none;
+  }
+  .bottom {
+    position: fixed;
+    width: 100%;
+    top: 95%;
+  }
+  .bottom_text {
+    font-family: "Playfair Display", serif;
+    padding-left: 2%;
+    opacity: 0.7;
+    font-size: 0.7rem;
+  }
+  .main {
+    height: 80vh;
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1.5fr 1fr;
+  }
+  .btns {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  .title {
+    font-size: 1.8rem;
+    font-family: "Playfair Display", serif;
+  }
+  .title h1 {
+    position: relative;
+    top: 10%;
+  }
+  .stat {
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
+  }
+  .stat h2 {
+    position: relative;
+    top: 0%;
+  }
+
+  .para {
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .para p {
+    position: relative;
+    top: -5%;
+  }
+  .create_btn,
+  .post_btn {
+    border: solid 2px black;
+    height: fit-content;
+    padding: 9px;
+    border-radius: 5%;
+    background-color: transparent;
+    box-shadow: 6px 6px 4px black;
+    transition: none;
+  }
+  .create_btn:active {
+    transform: none;
+    box-shadow: none;
+  }
+  .post_btn:active {
+    box-shadow:none;
+    transform: none;
+  }
+  .btns a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .create_btn:hover,
+  .post_btn:hover {
+    box-shadow: none;
+  }
+}
+
+@media (max-width:300px) {
+  #navbar {
+    padding-left:0%;
+    padding-right: 0%;
+  }
+  .navbar_div {
+    font-size: 0.8rem;
+  }
+  
+  .parts_nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+  }
+  .right_nav a {
+    transition: none;
+  }
+  .right_nav a:hover {
+    color: black;
+    text-shadow: none;
+  }
+  .bottom {
+    position: fixed;
+    width: 100%;
+    top: 95%;
+  }
+  .bottom_text {
+    font-family: "Playfair Display", serif;
+    padding-left: 2%;
+    opacity: 0.7;
+    font-size: 0.7rem;
+  }
+  .main {
+    height: 80vh;
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1.5fr 1fr;
+  }
+  .btns {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  .title {
+    font-size: 1.6rem;
+    font-family: "Playfair Display", serif;
+  }
+  .title h1 {
+    position: relative;
+    top: 10%;
+  }
+  .stat {
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+  }
+  .stat h2 {
+    position: relative;
+    top: 0%;
+  }
+
+  .para {
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+  .para p {
+    position: relative;
+    top: -5%;
+  }
+  .create_btn,
+  .post_btn {
+    border: solid 2px black;
+    height: fit-content;
+    padding: 8px;
+    border-radius: 5%;
+    background-color: transparent;
+    box-shadow: 6px 6px 4px black;
+    transition: all 0.3s ease-in-out;
+  }
+  .create_btn:active {
+    transform: none;
+    box-shadow: none;
+  }
+  .post_btn:active {
+    box-shadow:none;
+    transform: none;
+  }
+  .btns a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .create_btn:hover,
+  .post_btn:hover {
+    box-shadow: none;
+  }
+}

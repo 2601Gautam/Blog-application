@@ -1,0 +1,205 @@
+body {
+  background: radial-gradient(circle, #5290c9, #a1c8e3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+.sign_main {
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 50%;
+  height: 70%;
+  transition: all 0.3s ease-in-out;
+}
+.sign_main:hover {
+  background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
+  border: 2px solid #050a10; /* Darker border color */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+.signiin_title {
+  font-size: 2rem;
+  align-self: center;
+}
+.sign_form #email,
+#password {
+  border: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 1%;
+  outline: none;
+}
+.sign_form {
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+.sign_form button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  height: 2em;
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+  border: 2px solid #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  
+}
+.sign_form button:hover {
+  box-shadow: 3px 2px 5px rgb(0, 0, 0);
+}
+
+input {
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #000; /* Text color inside the input */
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  padding: 8px;
+  outline: none;
+  width: 50%;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.stext {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  height: 2em;
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.stext a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.stext a:hover {
+  color: white;
+}
+a:active {
+  transform: scale(0.97);
+}
+.error h2{
+  color: red;
+}
+@media (min-width:401px) and (max-width: 600px){
+    .sign_main {
+      border: 2px solid #050a10;;
+      width: 70%;
+      height: 60%;
+      background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
+
+    }
+    .signiin_title {
+      font-size: 1.5rem;
+      align-self: center;
+    }
+    
+    .sign_form {
+      font-size: 1.05rem;
+    }
+    .sign_form button {
+      font-size: 1.05rem;
+      border: 2px solid #000000;
+      margin-top: 20px;
+    }
+    .sign_form button:hover {
+      box-shadow: none;
+    }
+    input {
+      font-size: 1.05rem;
+      width: 60%;
+    }
+    
+    button:active {
+      transform: scale(0.97);
+    }
+    
+    .stext {
+      font-size: 1.05rem;
+      height: 100%;
+    }
+    .stext > *{
+        position: relative;
+        top : 30%;
+    }
+    .stext a {
+      text-decoration: none;
+      color: #000;
+      transition: all 0.3s ease-in-out;
+    }
+    a:active {
+      transform: scale(0.97);
+    }
+    .error h2{
+      font-size: 1.2rem;
+    }
+}
+
+@media (max-width:400px){
+    .sign_main {
+      border: 2px solid #050a10;;
+      width: 90%;
+      height: 50%;
+      background: radial-gradient(circle, #5290c9, #a1c8e3); 
+    }
+    .signiin_title {
+      font-size: 1rem;
+      align-self: center;
+    }
+    .sign_form {
+      font-size: 1rem;
+    }
+    .sign_form button {
+      font-size: 1rem;
+      border: 2px solid #000000;
+      margin-top: 20px;
+    }
+    .sign_form button:hover {
+      box-shadow: none;
+    }
+    input {
+      font-size: 1rem;
+      width: 60%;
+    }
+    
+    button:active {
+      transform: scale(0.97);
+    }
+    .stext {
+      font-size: 1rem;
+      height: 100%;
+    }
+    .stext > *{
+        position: relative;
+        top : 20%;
+    }
+    .stext a {
+      text-decoration: none;
+      color: #000;
+      transition: all 0.3s ease-in-out;
+    }
+    a:active {
+      transform: scale(0.97);
+    }
+     .error h2{
+      font-size: 1rem;
+
+    }
+}

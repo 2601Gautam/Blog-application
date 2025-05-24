@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThoughtLog</title>
+  </head>
+  <body>
+    <%-include("partials/header.ejs") %>
+    <section>
+      <div class="main">
+        <div class="title">
+          <h1>ThoughtLog 💭</h1>
+        </div>
+        <div class="stat">
+          <h2>Your ideas deserve a place</h2>
+        </div>
+        <div class="para">
+          <p>
+            🧠 ThoughtLog is the perfect place to bring your ideas to life. ✍️ Easily create and update your posts to share your stories 📖, thoughts 💭, and reflections 🌟. Take full control of your content and start expressing yourself today on ThoughtLog! 🚀
+          </p>
+        </div>
+          <div class="btns">
+            <div class="create_btn">
+              <a href="/create" class="btn"> 📝 Create Blog</a>
+            </div>
+            <div class="post_btn">
+              <a href="/browsepost" class="btn"> 📚 Browse Posts</a>
+            </div>
+          </div>
+      </div>
+    </section>
+    <%-include("partials/footer.ejs") %>
+  </body>
+</html>

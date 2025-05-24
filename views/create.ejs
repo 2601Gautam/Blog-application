@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/create.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Create Blog</title>
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <h1>Express Yourself - Create a Blog</h1>
+        </div>
+        <div class="create_form">
+            <form action="/create" method="post">
+                <div>
+                    <label for="title">Blog Title :</label>
+                    <input type="text" id="title" name="title" placeholder="Enter the title" required />
+                </div>
+                <div>
+                    <label for="content">Blog Content :</label>
+                    <textarea id="content" name="content" placeholder="Write your blog content here" required></textarea>
+                </div>
+                <div>
+                    <label for="tags">Categories/Tags:</label>
+                    <input type="text" id="tags" name="tags" placeholder="Enter tags separated by commas" />
+                </div>
+                <div>
+                    <label for="excerpt">Blog Summary/Excerpt:</label>
+                    <textarea id="excerpt" name="excerpt" placeholder="Write a short summary of the blog"></textarea>
+                </div>
+                <div>
+                    <label for="publish_date">Publish Date:</label>
+                    <input type="datetime-local" id="publish_date" name="publish_date" />
+                </div>
+                <div class="btn">
+                    <button type="submit">Submit Blog</button>
+                 </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

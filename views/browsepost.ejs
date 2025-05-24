@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/browsepost.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <title>Browse post</title>
+</head>
+<body>
+  <div class="title">
+    <h1>Read the Latest Blogs</h1>
+  </div>
+  <div class="written_blog"> 
+    <% if(locals.blogs) { %>
+      <% for(var i=0;i<blogs.length;i++){ %>
+        <div class="detail_blog">
+          <h2>Title: <%= blogs[i].title %></h2>
+          <h3>Tags: <%= blogs[i].tags %></h3>
+          <p>Content: <%= blogs[i].content %></p>
+          <p>Published on: <%= blogs[i].p_date %></p>
+        </div>
+        <% } %>
+    <% } %>
+  </div>
+  <div class="dummy_blog">
+
+    <% for(var i=0;i<dummy_blogs.length;i++){ %>
+      <div class="blog-post">
+        <h2>Title: <%= dummy_blogs[i].title %></h2>
+        <h3>Tags: <%= dummy_blogs[i].tags %></h3>
+        <p>
+          Content: <%= dummy_blogs[i].content %>
+        </p>
+        <p>Published on: <%= dummy_blogs[i].p_date %></p>
+      </div>
+      <% } %>
+  </div>
+  <div class="moti-stat">
+    <h3>Keep the blog rolling — your thoughts deserve the spotlight ✍️✨</h3>
+  </div>
+</body>  
+</html>

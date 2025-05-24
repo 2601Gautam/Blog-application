@@ -1,0 +1,236 @@
+body {
+  background: radial-gradient(circle, #5290c9, #a1c8e3);
+  height: 100vh;
+  margin: 0;
+}
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+.dummy_blog,
+.written_blog {
+  padding-left: 1%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+.dummy_blog h2,
+.written_blog h2 {
+  font-family: "Playfair Display", serif;
+}
+.blog-post,
+.detail_blog {
+  padding-left: 1%;
+  transition: all 0.3s ease-in-out;
+  border: 1.5px solid white;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 10px;
+}
+.blog-post:hover,
+.detail_blog:hover {
+  padding-left: 3%;
+  border: 1.5px solid black;
+  box-shadow: 4px 4px 8px rgb(14, 189, 243);
+}
+.moti-stat {
+  text-align: center;
+  padding: 10px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+@media (min-width:400px) and (max-width: 600px) {
+  .title {
+    font-size: 0.9rem;
+  }
+  .dummy_blog,
+  .written_blog {
+    padding-left: 1%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+  .dummy_blog h2,
+  .written_blog h2 {
+    font-family: "Playfair Display", serif;
+  }
+  .blog-post,
+  .detail_blog {
+    padding-left: 1%;
+    transition: none;
+    border: 1.5px solid white;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .blog-post:hover,
+  .detail_blog:hover {
+    padding-left: 1%;
+    border: 1.5px solid white;
+    box-shadow: none;
+  }
+  .moti-stat {
+    text-align: center;
+    padding: 10px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 400px) {
+  .title {
+    font-size: 0.8rem;
+  }
+  .dummy_blog,
+  .written_blog {
+    padding-left: 1%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+  }
+  .dummy_blog h2,
+  .written_blog h2 {
+    font-family: "Playfair Display", serif;
+  }
+  .blog-post,
+  .detail_blog {
+    padding-left: 1%;
+    transition: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .blog-post:hover,
+  .detail_blog:hover {
+    padding-left: 1%;
+    border: 1px solid white;
+    box-shadow: none;
+  }
+  .moti-stat {
+    text-align: center;
+    padding: 10px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 0.6rem;
+  }
+}
+body {
+  background: radial-gradient(circle, #5290c9, #a1c8e3);
+  height: 100vh;
+  margin: 0;
+}
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+.dummy_blog,
+.written_blog {
+  padding-left: 1%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+.dummy_blog h2,
+.written_blog h2 {
+  font-family: "Playfair Display", serif;
+}
+.blog-post,
+.detail_blog {
+  padding-left: 1%;
+  transition: all 0.3s ease-in-out;
+  border: 1.5px solid white;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 10px;
+}
+.blog-post:hover,
+.detail_blog:hover {
+  padding-left: 3%;
+  border: 1.5px solid black;
+  box-shadow: 4px 4px 8px rgb(14, 189, 243);
+}
+.moti-stat {
+  text-align: center;
+  padding: 10px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+@media (min-width:400px) and (max-width: 600px) {
+  .title {
+    font-size: 0.9rem;
+  }
+  .dummy_blog,
+  .written_blog {
+    padding-left: 1%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+  .dummy_blog h2,
+  .written_blog h2 {
+    font-family: "Playfair Display", serif;
+  }
+  .blog-post,
+  .detail_blog {
+    padding-left: 1%;
+    transition: none;
+    border: 1.5px solid white;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .blog-post:hover,
+  .detail_blog:hover {
+    padding-left: 1%;
+    border: 1.5px solid white;
+    box-shadow: none;
+  }
+  .moti-stat {
+    text-align: center;
+    padding: 10px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 400px) {
+  .title {
+    font-size: 0.8rem;
+  }
+  .dummy_blog,
+  .written_blog {
+    padding-left: 1%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+  }
+  .dummy_blog h2,
+  .written_blog h2 {
+    font-family: "Playfair Display", serif;
+  }
+  .blog-post,
+  .detail_blog {
+    padding-left: 1%;
+    transition: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .blog-post:hover,
+  .detail_blog:hover {
+    padding-left: 1%;
+    border: 1px solid white;
+    box-shadow: none;
+  }
+  .moti-stat {
+    text-align: center;
+    padding: 10px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 0.6rem;
+  }
+}

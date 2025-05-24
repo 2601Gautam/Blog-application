@@ -1,0 +1,21 @@
+# Node modules (very large and not needed in repo)
+node_modules/
+
+# Logs and debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Vercel local build cache (if any)
+.vercel/
+
+# Build output if you're doing SSR/SSG (for some frameworks)
+dist/
+build/
