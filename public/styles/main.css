@@ -89,7 +89,8 @@ body {
 }
 .para p {
   position: relative;
-  top: -5%;
+  text-align: center;
+  top: 0%;
 }
 .create_btn,
 .post_btn {
@@ -196,6 +197,7 @@ body {
   }
   .para p {
     position: relative;
+    text-align: justify;
     top: -5%;
   }
   .create_btn,
