@@ -6,6 +6,7 @@ const port = 3000;
 const users = {}; // Stores users in memory, using email as key
 //make instance of express
 const app = express();
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 //to store info of user that is loging
