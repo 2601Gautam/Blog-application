@@ -2,12 +2,18 @@
 import express from "express";
 import bodyParser from "body-parser";
 import session from "express-session";
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const port = 3000;
+const app = express();
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 const users = {}; // Stores users in memory, using email as key
 //make instance of express
-const app = express();
-app.set('view engine', 'ejs');
-app.set('views', './views');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 //to store info of user that is loging
