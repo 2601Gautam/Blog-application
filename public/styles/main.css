@@ -182,7 +182,6 @@ body {
   .stat {
     text-align: center;
     font-size: 1.1rem;
-    background-color: red;
   }
   .stat h2 {
     position: relative;
@@ -286,11 +285,10 @@ body {
   .stat {
     text-align: center;
     font-size: 1rem;
-    background-color: red;
   }
   .stat h2 {
     position: relative;
-    top: 15%;
+    top: 20%;
   }
 
   .para {
