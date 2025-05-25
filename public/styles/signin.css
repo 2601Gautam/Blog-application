@@ -42,9 +42,8 @@ body {
   font-weight: 600;
 }
 .sign_form button {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
-  height: 2em;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
   background-color: transparent;
   color: black;
   font-weight: 600;
@@ -52,7 +51,9 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 20px;
-  
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .sign_form button:hover {
   box-shadow: 3px 2px 5px rgb(0, 0, 0);
