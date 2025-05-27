@@ -30,9 +30,16 @@ body {
   opacity: 1;
   transition: transform 0.3s ease-in-out;
 }
-.right_nav a:hover {
-  color: white;
-  text-shadow: 2px 2px 5px rgb(0, 183, 255);
+.nav_btn{
+  background-color: transparent;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.nav_btn:hover{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 4px black;
 }
 .bottom {
   position: fixed;
@@ -96,9 +103,9 @@ body {
 .post_btn {
   border: solid 2px white;
   height: fit-content;
-  padding: 15px;
-  margin: 20px;
-  border-radius: 5%;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 15px;
   background-color: transparent;
   box-shadow: 6px 6px 4px black;
   transition: all 0.3s ease-in-out;
@@ -204,11 +211,12 @@ body {
   .post_btn {
     border: solid 2px black;
     height: fit-content;
-    padding: 9px;
-    border-radius: 5%;
+    padding: 15px;
+    border-radius: 10px;
     background-color: transparent;
     box-shadow: 6px 6px 4px black;
     transition: none;
+    margin: 10px;
   }
   .create_btn:active {
     transform: none;
@@ -229,6 +237,9 @@ body {
   .post_btn:hover {
     box-shadow: 6px 6px 4px black;
   }
+  .nav_btn:hover{
+  background-color: transparent;
+}
 }
 
 @media (max-width:300px) {
@@ -308,11 +319,12 @@ body {
   .post_btn {
     border: solid 2px black;
     height: fit-content;
-    padding: 8px;
-    border-radius: 5%;
+    padding: 10px;
+    border-radius: 10px;
     background-color: transparent;
     box-shadow: 6px 6px 4px black;
     transition: none;
+    margin: 5px;
   }
   .create_btn:active {
     transform: none;
@@ -333,4 +345,8 @@ body {
   .post_btn:hover {
     box-shadow: 6px 6px 4px black;
   }
+  .nav_btn:hover{
+  background-color: transparent;
+}
+
 }
