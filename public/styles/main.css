@@ -101,8 +101,8 @@ body {
 }
 .create_btn,
 .post_btn {
+  font-family: "Playfair Display", serif;
   border: solid 2px white;
-  height: fit-content;
   padding: 20px;
   margin: 30px;
   border-radius: 15px;
@@ -111,7 +111,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .btn{
-  font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-style: bold;
 }

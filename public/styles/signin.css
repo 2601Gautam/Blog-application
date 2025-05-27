@@ -14,13 +14,12 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   width: 50%;
-  height: 70%;
+  height: 60%;
   transition: all 0.3s ease-in-out;
 }
 .sign_main:hover {
   background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
-  border: 2px solid #050a10; /* Darker border color */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
+  box-shadow: 4px 8px 15px rgb(0, 0, 0) /* Adds depth */
 }
 .signiin_title {
   font-size: 2rem;
@@ -28,13 +27,19 @@ body {
 }
 .sign_form #email,
 #password {
-  border: none;
   border-bottom: 2px solid black;
   background: transparent;
   box-shadow: none;
-  padding: 0;
-  margin: 1%;
+  padding: 2px;
+  margin: 5px;
   outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.sign_main:hover > .sign_form  #email,
+.sign_main:hover > .sign_form  #password {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
 }
 .sign_form {
   font-size: 1.2rem;
@@ -47,20 +52,25 @@ body {
   background-color: transparent;
   color: black;
   font-weight: 600;
-  border: 2px solid #000000;
   cursor: pointer;
-  transition: all 0.3s ease;
   margin-top: 20px;
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  border: solid 2px white;
+  border-radius: 15px;
+  box-shadow: 6px 6px 4px black;
+  transition: all 0.3s ease-in-out;
 }
 .sign_form button:hover {
-  box-shadow: 3px 2px 5px rgb(0, 0, 0);
+  box-shadow: 4px 4px 2px rgba(251, 251, 251, 0.684);
 }
-
+.sign_form button:active{
+  transform: scale(0.97);
+  box-shadow: 6px 6px 4px white;
+}
 input {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   color: #000; /* Text color inside the input */
@@ -70,10 +80,6 @@ input {
   padding: 8px;
   outline: none;
   width: 50%;
-}
-
-button:active {
-  transform: scale(0.97);
 }
 
 .stext {
@@ -88,10 +94,12 @@ button:active {
 .stext a {
   text-decoration: none;
   color: #000;
+  font-family: "Playfair Display", serif;
   transition: all 0.3s ease-in-out;
 }
 .stext a:hover {
   color: white;
+  padding-left: 5px;
 }
 a:active {
   transform: scale(0.97);
@@ -101,11 +109,11 @@ a:active {
 }
 @media (min-width:401px) and (max-width: 600px){
     .sign_main {
-      border: 2px solid #050a10;;
+      border: 2px solid transparent;
       width: 70%;
-      height: 60%;
+      height: 55%;
       background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
-
+      box-shadow: 4px 8px 15px rgb(0, 0, 0) 
     }
     .signiin_title {
       font-size: 1.5rem;
@@ -115,10 +123,19 @@ a:active {
     .sign_form {
       font-size: 1.05rem;
     }
+    .sign_form #email,
+#password {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
     .sign_form button {
       font-size: 1.05rem;
-      border: 2px solid #000000;
-      margin-top: 20px;
+      border: solid 2px white;
+      margin-top: 25px;
+      border-radius: 15px;
+      box-shadow: 4px 4px 2px rgba(251, 251, 251, 0.684);
     }
     .sign_form button:hover {
       box-shadow: none;
@@ -141,8 +158,9 @@ a:active {
         top : 30%;
     }
     .stext a {
-      text-decoration: none;
-      color: #000;
+      
+      color: white;
+      padding-left: 5px;
       transition: all 0.3s ease-in-out;
     }
     a:active {
@@ -151,14 +169,18 @@ a:active {
     .error h2{
       font-size: 1.2rem;
     }
+    .stext a:hover {
+      padding-left:5px;
+    }
 }
 
 @media (max-width:400px){
     .sign_main {
-      border: 2px solid #050a10;;
+      border: 2px solid transparent;
       width: 90%;
-      height: 50%;
+      height: 45%;
       background: radial-gradient(circle, #5290c9, #a1c8e3); 
+      box-shadow: 4px 8px 15px rgb(0, 0, 0) ;
     }
     .signiin_title {
       font-size: 1rem;
@@ -167,10 +189,19 @@ a:active {
     .sign_form {
       font-size: 1rem;
     }
+     .sign_form #email,
+#password {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
     .sign_form button {
       font-size: 1rem;
-      border: 2px solid #000000;
+      border: 2px solid white;
       margin-top: 20px;
+      border-radius: 15px;
+      box-shadow: 4px 4px 2px rgba(251, 251, 251, 0.684);
     }
     .sign_form button:hover {
       box-shadow: none;
@@ -192,8 +223,8 @@ a:active {
         top : 20%;
     }
     .stext a {
-      text-decoration: none;
-      color: #000;
+       color: white;
+      padding-left: 5px;
       transition: all 0.3s ease-in-out;
     }
     a:active {
@@ -202,5 +233,8 @@ a:active {
      .error h2{
       font-size: 1rem;
 
+    }
+    .stext a:hover {
+      padding-left:5px;
     }
 }
