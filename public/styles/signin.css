@@ -14,18 +14,19 @@ body {
   font-family: "Playfair Display", serif;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  width: 50%;
+  width: 60%;
   height: 60%;
   transition: all 0.4s linear;
 }
 .sign_main:hover {
   background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
-  box-shadow: 0px 0px 15px white /* Adds depth */
+  box-shadow: 0px 0px 15px white; /* Adds depth */
 }
 .signiin_title {
   font-size: 2rem;
   align-self: center;
 }
+
 .sign_form #email,
 #password {
   border-bottom: 2px solid black;
@@ -36,22 +37,22 @@ body {
   outline: none;
   transition: all 0.4s linear;
 }
-.sign_form #email{
-  margin-left: 2%;
-}
-.sign_main:hover > .sign_form  #email,
-.sign_main:hover > .sign_form  #password {
+
+.sign_main:hover > .sign_form #email,
+.sign_main:hover > .sign_form #password {
   border: 2px solid white;
-  padding: 7px;
+  padding: 10px;
   border-radius: 10px;
+  box-shadow: 0px 0px 4px white;
 }
-#togglePassword{
+#togglePassword {
   cursor: pointer;
   opacity: 0;
   transition: all 0.3s linear;
   font-size: 1.5rem;
 }
-.sign_main:hover > .sign_form  #togglePassword{
+
+.sign_main:hover > .sign_form #togglePassword {
   opacity: 1;
 }
 .sign_form {
@@ -78,7 +79,7 @@ body {
 .sign_form button:hover {
   box-shadow: 4px 4px 2px rgba(251, 251, 251, 0.684);
 }
-.sign_form button:active{
+.sign_form button:active {
   transform: scale(0.97);
   box-shadow: 6px 6px 4px white;
 }
@@ -93,9 +94,8 @@ input {
   padding: 8px;
   outline: none;
   width: 50%;
-
 }
-.sign_main:hover > .stext a{
+.sign_main:hover > .stext a {
   padding-left: 5px;
   color: white;
 }
@@ -122,212 +122,243 @@ a:active {
   transform: scale(0.97);
 }
 
-.error h2{
+.error h2 {
   color: red;
 }
-@media (min-width:401px) and (max-width: 600px){
-    .sign_main {
-      box-shadow: 0px 0px 15px white;
-      border: 2px solid transparent;
-      width: 70%;
-      height: 55%;
-      background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
-    }
-    .signiin_title {
-      font-size: 1.5rem;
-      align-self: center;
-    }
-    
-    .sign_form {
-      font-size: 1.05rem;
-    }
-    .sign_form #email,
-#password {
-  border: 2px solid white;
-  padding: 7px;
-  border-radius: 10px;
-  
-}
-.sign_form #email{
-  margin-left: 8%;
-  margin: 1%;
-}
-    .sign_form button {
-      font-size: 1.05rem;
-      border: solid 2px white;
-      margin-top: 25px;
-      border-radius: 15px;
-      box-shadow: 4px 4px 2px black;
-    }
-    .sign_form button:hover {
-      box-shadow: 4px 4px 2px black;
-    }
-    input {
-      font-size: 1.05rem;
-      width: 60%;
-    }
-    
-    button:active {
-      transform: scale(0.97);
-    }
-    
-    .stext {
-      font-size: 1.05rem;
-      height: 100%;
-    }
-    .stext > *{
-        position: relative;
-        top : 30%;
-    }
-    .stext a {
-      
-      color: white;
-      padding-left: 5px;
-      transition: all 0.3s ease-in-out;
-    }
-    a:active {
-      transform: scale(0.97);
-    }
-    .error h2{
-      font-size: 1.2rem;
-    }
-    .stext a:hover {
-      padding-left:5px;
-    }
-}
+@media (min-width: 401px) and (max-width: 600px) {
+  .sign_main {
+    box-shadow: 0px 0px 15px white;
+    border: 2px solid transparent;
+    width: 90%;
+    height: 55%;
+    background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
+  }
+  .signiin_title {
+    font-size: 1.5rem;
+    align-self: center;
+  }
 
-@media (min-width:310px) and (max-width:400px){
-    .sign_main {
-      box-shadow: 0px 0px 15px white;
-      border: 2px solid transparent;
-      width: 90%;
-      height: 45%;
-      background: radial-gradient(circle, #5290c9, #a1c8e3); 
-    }
-    .signiin_title {
-      font-size: 1rem;
-      align-self: center;
-    }
-    .sign_form {
-      font-size: 1rem;
-    }
-     .sign_form #email,
-#password {
-  border: 2px solid white;
-  padding: 7px;
-  border-radius: 10px;
-  
-}
+  .sign_form {
+    font-size: 1.05rem;
+  }
+  .sign_form #email,
+  #password {
+    border: 2px solid white;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px white;
+  }
+  .sign_form #email {
+    margin-left: 8%;
+    margin: 1%;
+  }
   .sign_form button {
-      font-size: 1rem;
-      border: 2px solid white;
-      margin-top: 20px;
-      border-radius: 15px;
-      box-shadow: 4px 4px 2px black;
-    }
-    .sign_form button:hover {
-      box-shadow: 4px 4px 2px black;
-    }
-    input {
-      font-size: 1rem;
-      width: 60%;
-    }
-    
-    button:active {
-      transform: scale(0.97);
-    }
-    .stext {
-      font-size: 1rem;
-      height: 100%;
-    }
-    .stext > *{
-        position: relative;
-        top : 20%;
-    }
-    .stext a {
-       color: white;
-      padding-left: 5px;
-      transition: all 0.3s ease-in-out;
-    }
-    a:active {
-      transform: scale(0.97);
-    }
-     .error h2{
-      font-size: 1rem;
+    font-size: 1.05rem;
+    border: solid 2px white;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 2px black;
+  }
+  .sign_form button:hover {
+    box-shadow: 4px 4px 2px black;
+  }
+  input {
+    font-size: 1.05rem;
+    width: 50%;
+  }
 
-    }
-    .stext a:hover {
-      padding-left:5px;
-    }
+  button:active {
+    transform: scale(0.97);
+  }
+
+  .stext {
+    font-size: 1.05rem;
+    height: 100%;
+  }
+  .stext > * {
+    position: relative;
+    top: 30%;
+  }
+  .stext a {
+    color: white;
+    padding-left: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  a:active {
+    transform: scale(0.97);
+  }
+  .error h2 {
+    font-size: 1.2rem;
+  }
+  .stext a:hover {
+    padding-left: 5px;
+  }
+  #togglePassword {
+    opacity:1;
+  }
 }
 
-@media (max-width:310px){
-    .sign_main {
-      box-shadow: 0px 0px 15px white;
-      border: 2px solid transparent;
-      width: 90%;
-      height: 50%;
-      background: radial-gradient(circle, #5290c9, #a1c8e3); 
-    }
-    .signiin_title {
-      font-size: 1rem;
-      align-self: center;
-    }
-    .sign_form {
-      font-size: 1rem;
-    }
-     .sign_form #email,
-#password {
-  border: 2px solid white;
-  padding: 5px;
-  border-radius: 10px;
-  
-}
-.sign_main:hover > .sign_form  #email,
-.sign_main:hover > .sign_form  #password {
-  border: 2px solid white;
-  padding: 5px;
-  border-radius: 10px;
-}
+@media (min-width: 310px) and (max-width: 400px) {
+  .sign_main {
+    box-shadow: 0px 0px 15px white;
+    border: 2px solid transparent;
+    width: 90%;
+    height: 45%;
+    background: radial-gradient(circle, #5290c9, #a1c8e3);
+  }
+  .signiin_title {
+    font-size: 1rem;
+    align-self: center;
+  }
+  .sign_form {
+    font-size: 1rem;
+  }
+  .sign_form #email,
+  #password {
+    border: 2px solid white;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px white;
+  }
+  #email{
+    position: relative;
+    right: 1.1%;
+  }
+  #password {
+    position: relative;
+    left: 5%;
+  }
+
   .sign_form button {
-      font-size: 1rem;
-      border: 2px solid white;
-      margin-top: 20px;
-      border-radius: 15px;
-      box-shadow: 4px 4px 2px black;
-    }
-    .sign_form button:hover {
-      box-shadow: 4px 4px 2px black;
-    }
-    input {
-      font-size: 1rem;
-      width: 60%;
-    }
-    
-    button:active {
-      transform: scale(0.97);
-    }
-    .stext {
-      font-size: 1rem;
-      height: 100%;
-    }
-    .stext > *{
-        position: relative;
-        top : 20%;
-    }
-    .stext a {
-       color: white;
-      padding-left: 5px;
-      transition: all 0.3s ease-in-out;
-    }
-    a:active {
-      transform: scale(0.97);
-    }
-     .error h2{
-      font-size: 1rem;
+    font-size: 1rem;
+    border: 2px solid white;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 2px black;
+  }
+  .sign_form button:hover {
+    box-shadow: 4px 4px 2px black;
+  }
+  input {
+    font-size: 1rem;
+    width: 70%;
+  }
+  label {
+    display: none;
+  }
+  button:active {
+    transform: scale(0.97);
+  }
+  .stext {
+    font-size: 1rem;
+    height: 100%;
+  }
+  .stext > * {
+    position: relative;
+    top: 20%;
+  }
+  #togglePassword {
+    opacity:1;
+    position: relative;
+   left: 5%;
+  }
+  .stext a {
+    color: white;
+    padding-left: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  a:active {
+    transform: scale(0.97);
+  }
+  .error h2 {
+    font-size: 1rem;
+  }
+  .stext a:hover {
+    padding-left: 5px;
+  }
+}
 
-    }
-    .stext a:hover {
-      padding-left:5px;
-    }
+@media (max-width: 310px) {
+  .sign_main {
+    box-shadow: 0px 0px 15px white;
+    border: 2px solid transparent;
+    width: 90%;
+    height: 50%;
+    background: radial-gradient(circle, #5290c9, #a1c8e3);
+  }
+  #togglePassword {
+    opacity:1;
+    position: relative;
+    left: 5%;
+  }
+   #email{
+    position: relative;
+    right: 1.1%;
+  }
+  #password {
+    position: relative;
+    left: 5%;
+  }
+  .signiin_title {
+    font-size: 1rem;
+    align-self: center;
+  }
+  .sign_form {
+    font-size: 1rem;
+  }
+  .sign_form #email,
+  #password {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px white;
+  }
+  .sign_main:hover > .sign_form #email,
+  .sign_main:hover > .sign_form #password {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .sign_form button {
+    font-size: 1rem;
+    border: 2px solid white;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 2px black;
+  }
+  .sign_form button:hover {
+    box-shadow: 4px 4px 2px black;
+  }
+  input {
+    font-size: 1rem;
+    width: 70%;
+  }
+  label {
+    display: none;
+  }
+  button:active {
+    transform: scale(0.97);
+  }
+  .stext {
+    font-size: 1rem;
+    height: 100%;
+  }
+  .stext > * {
+    position: relative;
+    top: 20%;
+  }
+  .stext a {
+    color: white;
+    padding-left: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  a:active {
+    transform: scale(0.97);
+  }
+  .error h2 {
+    font-size: 1rem;
+  }
+  .stext a:hover {
+    padding-left: 5px;
+  }
 }
