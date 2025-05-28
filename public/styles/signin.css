@@ -16,7 +16,7 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   width: 50%;
   height: 60%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s linear;
 }
 .sign_main:hover {
   background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
@@ -34,7 +34,7 @@ body {
   padding: 2px;
   margin: 5px;
   outline: none;
-  transition: all 0.3s linear;
+  transition: all 0.4s linear;
 }
 .sign_main:hover > .sign_form  #email,
 .sign_main:hover > .sign_form  #password {
@@ -114,7 +114,7 @@ a:active {
       width: 70%;
       height: 55%;
       background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
-      box-shadow: 4px 8px 15px rgb(0, 0, 0) 
+      box-shadow: 4px 8px 15px rgb(0, 0, 0); 
     }
     .signiin_title {
       font-size: 1.5rem;
@@ -133,10 +133,10 @@ a:active {
 }
     .sign_form button {
       font-size: 1.05rem;
-      border: solid 2px black;
+      border: solid 2px white;
       margin-top: 25px;
       border-radius: 15px;
-      box-shadow: 4px 4px 2px rgba(251, 251, 251, 0.684);
+      box-shadow: 4px 4px 2px black;
     }
     .sign_form button:hover {
       box-shadow: none;
@@ -199,10 +199,10 @@ a:active {
 }
     .sign_form button {
       font-size: 1rem;
-      border: 2px solid black;
+      border: 2px solid white;
       margin-top: 20px;
       border-radius: 15px;
-      box-shadow: 4px 4px 2px rgba(251, 251, 251, 0.684);
+      box-shadow: 4px 4px 2px black;
     }
     .sign_form button:hover {
       box-shadow: none;
