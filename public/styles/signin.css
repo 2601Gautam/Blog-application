@@ -45,6 +45,15 @@ body {
   padding: 7px;
   border-radius: 10px;
 }
+#togglePassword{
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s linear;
+  font-size: 1.5rem;
+}
+.sign_main:hover > .sign_form  #togglePassword{
+  opacity: 1;
+}
 .sign_form {
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
