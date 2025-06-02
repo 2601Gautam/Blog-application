@@ -154,6 +154,17 @@ body {
   .right_nav a {
     transition: none;
   }
+  .nav_btn{
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 4px black;
+}
+.nav_btn:hover{
+  background-color: rgb(255, 255, 255);
+  box-shadow: none;
+}
   .right_nav a:hover {
     color: black;
     text-shadow: none;
