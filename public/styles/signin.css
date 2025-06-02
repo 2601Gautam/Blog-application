@@ -43,6 +43,7 @@ body {
   border: 2px solid white;
   padding: 10px;
   border-radius: 10px;
+  margin: 5px;
   box-shadow: 0px 0px 4px white;
 }
 #togglePassword {
@@ -218,7 +219,7 @@ a:active {
   .sign_form #email,
   #password {
     border: 2px solid white;
-    padding: 7px;
+    padding: 10px;
     margin: 5px;
     border-radius: 10px;
     box-shadow: 0px 0px 4px white;
@@ -227,7 +228,6 @@ a:active {
   #email{
     position: relative;
     right :  8px;
-    
   }
   #password {
     position: relative;
@@ -246,7 +246,7 @@ a:active {
   }
   input {
     font-size: 1rem;
-    width: 70%;
+    width: 80%;
   }
   label {
     display: none;
@@ -298,7 +298,7 @@ a:active {
   }
    #email{
     position: relative;
-    right: 10px;
+    right: 8px;
   }
   #password {
     position: relative;
@@ -310,11 +310,14 @@ a:active {
   }
   .sign_form {
     font-size: 1rem;
+    display: flex;
+    justify-content: center;
   }
   .sign_form #email,
   #password {
+    margin: 5px;
     border: 2px solid white;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 4px white;
   }
