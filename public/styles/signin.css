@@ -219,12 +219,14 @@ a:active {
   #password {
     border: 2px solid white;
     padding: 7px;
+    margin: 5px;
     border-radius: 10px;
     box-shadow: 0px 0px 4px white;
+    width: 70%;
   }
   #email{
     position: relative;
-    right :  10px;
+    right :  8px;
     
   }
   #password {
