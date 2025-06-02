@@ -212,6 +212,8 @@ a:active {
   }
   .sign_form {
     font-size: 1rem;
+    display: flex;
+    justify-content: center;
   }
   .sign_form #email,
   #password {
@@ -222,7 +224,8 @@ a:active {
   }
   #email{
     position: relative;
-    right: 1.1%;
+    right :  10px;
+    
   }
   #password {
     position: relative;
@@ -293,7 +296,7 @@ a:active {
   }
    #email{
     position: relative;
-    right: 1.1%;
+    right: 10px;
   }
   #password {
     position: relative;
