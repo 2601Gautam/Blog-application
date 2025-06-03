@@ -231,7 +231,7 @@ a:active {
     box-shadow: 0px 0px 15px white;
     border: 2px solid transparent;
     width: 90%;
-    height: 60%;
+    height: 65%;
     background: radial-gradient(circle, #5290c9, #a1c8e3);
   }
   .signup_title {
@@ -246,6 +246,7 @@ a:active {
     border-radius: 10px;
     box-shadow: 0px 0px 4px white;
     width: 100%;
+    margin: 5px;
   }
   .sign_form {
     font-size: 0.6rem;
@@ -275,6 +276,7 @@ a:active {
   .stext {
     font-size: 1rem;
     height: 100%;
+    font-weight: 600;
   }
   .stext > * {
     position: relative;
