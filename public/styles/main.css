@@ -32,7 +32,7 @@ body {
 }
 .nav_btn{
   background-color: transparent;
-  padding: 5px;
+  padding: 8px;
   border: 1px solid transparent;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
@@ -155,7 +155,7 @@ body {
     transition: none;
   }
   .nav_btn{
-  padding: 5px;
+  padding: 8px;
   border: 1px solid transparent;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
@@ -163,7 +163,7 @@ body {
 }
 .nav_btn:hover{
   background-color: rgb(255, 255, 255);
-  box-shadow: none;
+  box-shadow: 4px 4px 4px black;
 }
   .right_nav a:hover {
     color: black;
@@ -250,11 +250,7 @@ body {
   .post_btn:hover {
     box-shadow: 6px 6px 4px black;
   }
-  .nav_btn:hover{
-  background-color: transparent;
-    box-shadow: none;
-
-}
+ 
 }
 
 @media (max-width:300px) {
@@ -360,9 +356,5 @@ body {
   .post_btn:hover {
     box-shadow: 6px 6px 4px black;
   }
-  .nav_btn:hover{
-  background-color: transparent;
-  box-shadow: none;
-}
 
 }

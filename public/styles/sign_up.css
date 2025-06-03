@@ -9,58 +9,76 @@ body {
 .sign_main {
   box-sizing: border-box;
   border: 2px solid transparent;
+  border-radius: 25px;
   text-align: center;
   font-family: "Playfair Display", serif;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  width: 50%;
-  height: 60%;
-  transition: all 0.3s ease-in-out;
+  width: 70%;
+  height: 75%;
+  transition: all 0.4s linear;
 }
 .sign_main:hover {
   background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
-  border: 2px solid #050a10; /* Darker border color */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
+  box-shadow: 0px 0px 15px white; 
 }
 .signup_title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   align-self: center;
 }
 .sign_form #email,
 #password,
 #confirm_password,
-username {
+#username {
   border: none;
   border-bottom: 2px solid black;
   background: transparent;
   box-shadow: none;
-  padding: 0;
+  padding: 2px;
   margin: 1%;
   outline: none;
+  transition: all 0.4s linear;
 }
+.sign_main:hover > .sign_form #email,
+.sign_main:hover > .sign_form #password,
+.sign_main:hover > .sign_form #username,
+.sign_main:hover > .sign_form #confirm_password
+{
+   border: 2px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: 0px 0px 4px white;
+}
+
 .sign_form {
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
 .sign_form button {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
-  height: 2em;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
   background-color: transparent;
   color: black;
   font-weight: 600;
-  border: 2px solid #000000;
+   border: solid 2px white;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 4px black;
+  transition: all 0.4s ease-in-out;
 }
 .sign_form button:hover {
-  box-shadow: 3px 2px 5px rgb(0, 0, 0);
+   box-shadow: 4px 4px 2px rgba(251, 251, 251, 0.684);
 }
 
 input {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   color: #000; /* Text color inside the input */
@@ -74,6 +92,7 @@ input {
 
 button:active {
   transform: scale(0.97);
+  box-shadow: 6px 6px 4px white;
 }
 
 .stext {
@@ -88,9 +107,12 @@ button:active {
 .stext a {
   text-decoration: none;
   color: #000;
-  transition: all 0.3s ease-in-out;
+  font-size: 1.4rem;
+  transition: all 0.4s ease-in-out;
+  font-family: "Playfair Display", serif;
 }
-.stext a:hover {
+.sign_main:hover > .stext a {
+  padding-left: 5px;
   color: white;
 }
 a:active {
@@ -100,34 +122,34 @@ a:active {
 @media (min-width: 600px) and (max-width: 800px) {
   .sign_main {
     border: 2px solid transparent;
-    width: 65%;
-    height: 60%;
+    width: 90%;
+    height: 80%;
   }
-  .sign_main:hover {
-    background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
-    border: 2px solid #050a10; /* Darker border color */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
-  }
+  .signup_title {
+  font-size: 1.5rem;
+  align-self: center;
+}
   .sign_form {
     font-size: 0.9rem;
   }
-  .sign_form button:hover {
-  box-shadow: 3px 2px 5px rgb(0, 0, 0);
+.sign_form button:hover {
+  box-shadow: 4px 4px 2px rgba(251, 251, 251, 0.684);
 }
   .sign_form button {
-    font-size: 1rem;
+    font-size: 1.3rem;
     border: 2px solid #000000;
     margin-top: 20px;
   }
   input {
-    font-size: 1rem;
+    font-size: 1.1rem;
     width: 60%;
   }
-  button:active {
-    transform: scale(0.97);
-  }
+  .sign_form button:active {
+  transform: scale(0.97);
+  box-shadow: 6px 6px 4px white;
+}
   .stext {
-    font-size: 1rem;
+    font-size: 1.2rem;
     height: 100%;
   }
   .stext > * {
@@ -146,29 +168,41 @@ a:active {
 
 @media (min-width: 450px) and (max-width: 600px) {
   .sign_main {
-    border: 2px solid #050a10;
+    box-shadow: 0px 0px 15px white;
+    border: 2px solid transparent;
     width: 90%;
-    height: 60%;
+    height: 70%;
     background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
   }
   .signup_title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     align-self: center;
   }
   .sign_form {
     font-size: 0.9rem;
   }
+  .sign_form #email,
+  #password ,#username,#confirm_password
+  {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px white;
+    width: 60%;
+  }
   .sign_form button {
     font-size: 1rem;
-    border: 2px solid #000000;
-    margin-top: 20px;
+    border: solid 2px white;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 2px black;
   }
   .sign_form button:hover {
-    box-shadow: none;
+    box-shadow: 4px 4px 2px black;
   }
   input {
     font-size: 1rem;
-    width: 60%;
+    width: 50%;
   }
   button:active {
     transform: scale(0.97);
@@ -182,8 +216,9 @@ a:active {
     top: 30%;
   }
   .stext a {
-    text-decoration: none;
-    color: #000;
+    color: white;
+    padding-left: 5px;
+    font-size: 1.3rem;
     transition: all 0.3s ease-in-out;
   }
   a:active {
@@ -193,36 +228,52 @@ a:active {
 
 @media (max-width: 450px) {
   .sign_main {
-    border: 2px solid #050a10;
+    box-shadow: 0px 0px 15px white;
+    border: 2px solid transparent;
     width: 90%;
-    height: 50%;
+    height: 60%;
     background: radial-gradient(circle, #5290c9, #a1c8e3);
   }
   .signup_title {
-    font-size: 0.8rem;
+    font-size: 1rem;
     align-self: center;
+  }
+  .sign_form #email,
+  #password ,#username,#confirm_password
+  {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px white;
+    width: 100%;
   }
   .sign_form {
     font-size: 0.6rem;
+    display: flex;
+    justify-content: center;
   }
   .sign_form button {
-    font-size: 0.8rem;
-    border: 2px solid #000000;
+    font-size: 1rem;
+    border: 2px solid white;
     margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 2px black;
   }
   .sign_form button:hover {
-    box-shadow: none;
+    box-shadow: 4px 4px 2px black;
   }
   input {
-    font-size: 0.7rem;
-    width: 60%;
+    font-size: 1rem;
+    width: 100%;
   }
-
+   label {
+    display: none;
+  }
   button:active {
     transform: scale(0.97);
   }
   .stext {
-    font-size: 0.8rem;
+    font-size: 1rem;
     height: 100%;
   }
   .stext > * {
@@ -230,8 +281,9 @@ a:active {
     top: 20%;
   }
   .stext a {
-    text-decoration: none;
-    color: #000;
+    color: white;
+    padding-left: 5px;
+    font-size: 1.1rem;
     transition: all 0.3s ease-in-out;
   }
   a:active {

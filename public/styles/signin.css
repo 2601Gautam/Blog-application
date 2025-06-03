@@ -115,10 +115,6 @@ input {
   font-family: "Playfair Display", serif;
   transition: all 0.3s linear;
 }
-.stext a:hover {
-  color: white;
-  padding-left: 5px;
-}
 a:active {
   transform: scale(0.97);
 }
@@ -131,7 +127,7 @@ a:active {
     box-shadow: 0px 0px 15px white;
     border: 2px solid transparent;
     width: 90%;
-    height: 55%;
+    height: 60%;
     background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
   }
   .signiin_title {
@@ -148,7 +144,7 @@ a:active {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 4px white;
-    width: 70%;
+    width: 55%;
   }
   .sign_form #email {
     margin-left: 8%;
@@ -192,9 +188,6 @@ a:active {
   .error h2 {
     font-size: 1.2rem;
   }
-  .stext a:hover {
-    padding-left: 5px;
-  }
   #togglePassword {
     opacity:1;
   }
@@ -205,7 +198,7 @@ a:active {
     box-shadow: 0px 0px 15px white;
     border: 2px solid transparent;
     width: 90%;
-    height: 45%;
+    height: 50%;
     background: radial-gradient(circle, #5290c9, #a1c8e3);
   }
   .signiin_title {
@@ -279,9 +272,7 @@ a:active {
   .error h2 {
     font-size: 1rem;
   }
-  .stext a:hover {
-    padding-left: 5px;
-  }
+
 }
 
 @media (max-width: 310px) {
