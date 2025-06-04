@@ -41,7 +41,7 @@ body {
   opacity: 1;
   transform: scale(1.1);
   padding-bottom: 5px;
-  border-bottom: rgb(0, 47, 255) solid 2px;
+  border-bottom: white solid 2px;
 }
 @media (max-width: 700px) {
   .about {
@@ -73,7 +73,7 @@ body {
     height: 40px;
     transform: scale(1.1);
     padding-bottom: 5px;
-    border-bottom: rgb(0, 47, 255) solid 2px;
+    border-bottom: transparent;
   }
   
 }
