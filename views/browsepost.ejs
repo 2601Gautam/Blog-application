@@ -12,17 +12,23 @@
     <h1>Read the Latest Blogs</h1>
   </div>
   <div class="written_blog"> 
-    <% if(locals.blogs) { %>
-      <% for(var i=0;i<blogs.length;i++){ %>
-        <div class="detail_blog">
-          <h2>Title: <%= blogs[i].title %></h2>
-          <h3>Tags: <%= blogs[i].tags %></h3>
-          <p>Content: <%= blogs[i].content %></p>
-          <p>Published on: <%= blogs[i].p_date %></p>
-        </div>
+  <% if (blogs && blogs.length > 0) { %>
+    <% for (var i = 0; i < blogs.length; i++) { %>
+      <div class="detail_blog">
+        <h2>Title: <%= blogs[i].title %></h2>
+        <h3>Tags: <%= blogs[i].tags %></h3>
+        <p>Content: <%= blogs[i].content %></p>
+        <p>Published on: <%= blogs[i].p_date %></p>
+        <% if (userEmail && blogs[i].author === userEmail) { %>
+           <form action="/delete/<%= i %>" method="POST" onsubmit="return confirm('Do you want to delete?');">
+              <button type="submit" id="delete_btn">🗑️ Delete Blog</button>
+          </form>
         <% } %>
+      </div>
     <% } %>
-  </div>
+  <% }  %>
+</div>
+
   <div class="dummy_blog">
 
     <% for(var i=0;i<dummy_blogs.length;i++){ %>

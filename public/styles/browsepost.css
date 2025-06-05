@@ -24,8 +24,8 @@ body {
 .detail_blog {
   padding-left: 1%;
   transition: all 0.4s linear;
-  border: 2px solid white;
-  border-radius: 6px;
+  border: 3px solid black;
+  border-radius: 10px;
   margin: 20px;
   padding: 20px;
 }
@@ -35,7 +35,8 @@ body {
   padding: 50px;
   box-shadow: 0px 0px 20px white;
 }
-.blog-post:hover h2{
+.blog-post:hover h2,
+.detail_blog:hover h2{
   color: white;
 }
 .moti-stat {
@@ -43,6 +44,33 @@ body {
   padding: 10px;
   font-family: "Playfair Display", serif;
   font-weight: 600;
+}
+#delete_btn{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: #ffffff 2px solid;
+  cursor: pointer;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  background-color: black;
+  color : white;
+  transition: all 0.3s linear;
+  position: relative;
+  left: 200%;
+}
+.detail_blog:hover #delete_btn{
+  position: relative;
+  left: 90%;
+}
+#delete_btn:hover{
+  transform: scale(1.01);
+  background-color: white;
+  color : black;
+  border: black 2px solid;
+}
+#delete_btn:active{
+  transform: scale(0.97);
 }
 @media (min-width:400px) and (max-width: 600px) {
   .title {

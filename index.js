@@ -33,27 +33,78 @@ app.get("/create", (req, res) => {
     // or whatever you use to store login status
     return res.redirect("/sign_in");
   }
-  res.render("create.ejs"); // Render createBrowsepost.ejs if logged in
+  const isEdit = req.query.edit === "true";
+   const blogToEdit = isEdit && req.session.latestBlogIndex === 0 ? blogs[0] : null;
+  res.render("create.ejs", { blog: blogToEdit, editMode: isEdit });// Render createBrowsepost.ejs if logged in
 });
  let blogs = [];
 app.post("/create",(req,res) => {
-     const newBlog = {
-        title: req.body["title"],
-        content: req.body["content"],
-        tags: req.body["tags"],
-        summary: req.body["excerpt"],
-        p_date: req.body["publish_date"]
-    };
-    blogs.unshift(newBlog); 
-    res.render("options.ejs");
+      const blogData = {
+    title: req.body["title"],
+    content: req.body["content"],
+    tags: req.body["tags"],
+    summary: req.body["excerpt"],
+    p_date: req.body["publish_date"],
+    author: req.session.user.email
+  };
+    if (req.session.latestBlogIndex === 0 && blogs.length > 0) {
+    // Edit the latest blog
+    blogs[0] = blogData;
+  } else {
+    // Create new blog
+    blogs.unshift(blogData);
+    req.session.latestBlogIndex = 0;
+  }
+    res.render("options.ejs", { latestBlog: blogData });
 });
 app.get("/browsepost", (req, res) => {
   res.render("browsepost.ejs",{
       blogs: blogs,
+      userEmail: req.session.user ? req.session.user.email : null,
      dummy_blogs: dummyBlogs
   });
 });
 
+app.post("/delete/:index", (req, res) => {
+  const index = parseInt(req.params.index);
+  if (
+    !isNaN(index) &&
+    index >= 0 &&
+    index < blogs.length &&
+    blogs[index].author === req.session.user.email
+  ) {
+    blogs.splice(index, 1);
+  }
+  res.redirect("/browsepost");
+});
+
+app.get("/edit", (req, res) => {
+  const index = req.session.latestBlogIndex;
+
+  if (index === undefined || index !== 0) {
+    return res.send("Edit not allowed. You can only edit your latest blog.");
+  }
+
+  const blogToEdit = blogs[0];
+  res.render("edit.ejs", { blog: blogToEdit });
+});
+app.post("/edit", (req, res) => {
+  const index = req.session.latestBlogIndex;
+
+  if (index !== 0) {
+    return res.send("Editing old blog is not allowed.");
+  }
+
+  blogs[0] = {
+    title: req.body["title"],
+    content: req.body["content"],
+    tags: req.body["tags"],
+    summary: req.body["excerpt"],
+    p_date: req.body["publish_date"]
+  };
+
+  res.redirect("/browsepost");
+});
 app.get("/about", (req, res) => {
   res.render("about.ejs");
 });
