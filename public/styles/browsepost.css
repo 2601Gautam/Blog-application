@@ -56,12 +56,8 @@ body {
   background-color: black;
   color : white;
   transition: all 0.3s linear;
-  position: relative;
-  left: 200%;
-}
-.detail_blog:hover #delete_btn{
-  position: relative;
-  left: 90%;
+  display: flex;
+  justify-self: flex-end;
 }
 #delete_btn:hover{
   transform: scale(1.01);
@@ -112,13 +108,14 @@ body {
   .blog-post:hover h2{
   color: black;
 }
+
 #delete_btn{
-  position: relative;
-  left: 90%;
   transform: scale(1.01);
   background-color: white;
   color : black;
   border: black 2px solid;
+  display: flex;
+  justify-self: flex-end;
 }
 }
 @media (max-width: 400px) {
@@ -165,11 +162,12 @@ body {
   color : black;
 }
 #delete_btn{
-  position: relative;
-  left: 90%;
-   transform: scale(1.01);
+  
+   transform: scale(1);
   background-color: white;
   color : black;
   border: black 2px solid;
+  display: flex;
+  justify-self: flex-end;
 }
 }
