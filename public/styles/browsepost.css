@@ -112,6 +112,14 @@ body {
   .blog-post:hover h2{
   color: black;
 }
+#delete_btn{
+  position: relative;
+  left: 90%;
+  transform: scale(1.01);
+  background-color: white;
+  color : black;
+  border: black 2px solid;
+}
 }
 @media (max-width: 400px) {
   .title {
@@ -152,5 +160,16 @@ body {
   }
   .blog-post:hover h2{
   color: black;
+}
+.detail_blog:hover h2{
+  color : black;
+}
+#delete_btn{
+  position: relative;
+  left: 90%;
+   transform: scale(1.01);
+  background-color: white;
+  color : black;
+  border: black 2px solid;
 }
 }
