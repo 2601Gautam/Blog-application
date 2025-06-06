@@ -15,7 +15,7 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   width: 60%;
-  height: 60%;
+  height: 65%;
   transition: all 0.4s linear;
 }
 .sign_main:hover {
@@ -127,7 +127,7 @@ a:active {
     box-shadow: 0px 0px 15px white;
     border: 2px solid transparent;
     width: 90%;
-    height: 60%;
+    height: 70%;
     background: radial-gradient(circle, #5290c9, #a1c8e3); /* Smooth gradient */
   }
   .signiin_title {
@@ -198,7 +198,7 @@ a:active {
     box-shadow: 0px 0px 15px white;
     border: 2px solid transparent;
     width: 90%;
-    height: 50%;
+    height: 60%;
     background: radial-gradient(circle, #5290c9, #a1c8e3);
   }
   .signiin_title {
@@ -280,7 +280,7 @@ a:active {
     box-shadow: 0px 0px 15px white;
     border: 2px solid transparent;
     width: 90%;
-    height: 50%;
+    height: 60%;
     background: radial-gradient(circle, #5290c9, #a1c8e3);
   }
   #togglePassword {
