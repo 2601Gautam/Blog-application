@@ -1,155 +1,21 @@
-//import required modules
+// Import required modules
 import express from "express";
 import bodyParser from "body-parser";
 import session from "express-session";
-import path from 'path';
-import { fileURLToPath } from 'url';
+import path from "path";
+import { fileURLToPath } from "url";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const port = 3000;
 const app = express();
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
-const users = {}; // Stores users in memory, using email as key
-//make instance of express
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));//to store info of user that is loging
-app.use(
-  session({
-    secret: "yourSecretKey",
-    resave: false,
-    saveUninitialized: true,
-  })
-);
-//render ejs file
-app.get("/", (req, res) => {
-  res.render("index.ejs");
-});
-
-app.get("/create", (req, res) => {
-  if (!req.session.user) {
-    // or whatever you use to store login status
-    return res.redirect("/sign_in");
-  }
-  const isEdit = req.query.edit === "true";
-   const blogToEdit = isEdit && req.session.latestBlogIndex === 0 ? blogs[0] : null;
-  res.render("create.ejs", { blog: blogToEdit, editMode: isEdit });// Render createBrowsepost.ejs if logged in
-});
- let blogs = [];
-app.post("/create",(req,res) => {
-    const blogData = {
-    title: req.body["title"],
-    content: req.body["content"],
-    tags: req.body["tags"],
-    summary: req.body["excerpt"],
-    p_date: req.body["publish_date"],
-    author: req.session.user.email
-  };
-    if (req.session.latestBlogIndex === 0 && blogs.length > 0) {
-    // Edit the latest blog
-    blogs[0] = blogData;
-  } else {
-    // Create new blog
-    blogs.unshift(blogData);
-    req.session.latestBlogIndex = 0;
-  }
-    res.render("options.ejs", { latestBlog: blogData });
-});
-app.get("/browsepost", (req, res) => {
-  res.render("browsepost.ejs",{
-      blogs: blogs,
-      userEmail: req.session.user ? req.session.user.email : null,
-     dummy_blogs: dummyBlogs
-  });
-});
-
-app.post("/delete/:index", (req, res) => {
-  const index = parseInt(req.params.index);
-  if (
-    !isNaN(index) &&
-    index >= 0 &&
-    index < blogs.length &&
-    blogs[index].author === req.session.user.email
-  ) {
-    blogs.splice(index, 1);
-  }
-  res.redirect("/browsepost");
-});
-
-app.get("/edit", (req, res) => {
-  const index = req.session.latestBlogIndex;
-
-  if (index === undefined || index !== 0) {
-    return res.send("Edit not allowed. You can only edit your latest blog.");
-  }
-
-  const blogToEdit = blogs[0];
-  res.render("edit.ejs", { blog: blogToEdit });
-});
-app.post("/edit", (req, res) => {
-  const index = req.session.latestBlogIndex;
-
-  if (index !== 0) {
-    return res.send("Editing old blog is not allowed.");
-  }
-
-  blogs[0] = {
-    title: req.body["title"],
-    content: req.body["content"],
-    tags: req.body["tags"],
-    summary: req.body["excerpt"],
-    p_date: req.body["publish_date"]
-  };
-
-  res.redirect("/browsepost");
-});
-app.get("/about", (req, res) => {
-  res.render("about.ejs");
-});
-app.get("/sign_in", (req, res) => {
-  res.render("sign_in.ejs");
-});
-
-
-app.post("/sign_in", (req, res) => {
-  const { email, password } = req.body;
-
-  // Check if the user exists
-  const user = users[email];
-
-  if (!user || user.password !== password) {
-   return res.render("sign_in.ejs", { error: "Invalid credentials. Please try again." });
-  }
-
-  req.session.user = { email }; // Set user in session
-  res.redirect("/create");
-});
-app.get("/sign_up", (req, res) => {
-  res.render("sign_up.ejs");
-});
-
-app.post("/sign_up", (req, res) => {
-  const { username, email, password, confirm_password } = req.body;
-  if (password !== confirm_password) {
-  return res.send("Passwords do not match.");
-}
-  // Check if email already exists in the "database"
-  if (users[email]) {
-    return res.send("Account already exists. Please sign in.");
-  }
-
-  // Create new user
-  users[email] = { password }; // Store user in memory
-  req.session.user = { email }; // Save user in session
-  res.redirect("/create"); // Redirect to post creation page
-});
-
-//start server
-app.listen(port, () => {
-  console.log(`Server is runining on port ${port}.`);
-});
+// Store users and blogs in memory
+const users = {};
+let blogs = [];
 
 const dummyBlogs = [
   {
@@ -213,3 +79,149 @@ const dummyBlogs = [
     p_date: "2025-05-02"
   }
 ];
+
+
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(
+  session({
+    secret: "yourSecretKey",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+// Middleware to protect routes
+function isLoggedIn(req, res, next) {
+  if (!req.session.user || !req.session.user.email) {
+    return res.redirect("/sign_in");
+  }
+  next();
+}
+
+// Routes
+app.get("/", (req, res) => {
+  res.render("index.ejs");
+});
+
+app.get("/create", isLoggedIn, (req, res) => {
+  const isEdit = req.query.edit === "true";
+  const blogToEdit = isEdit && req.session.latestBlogIndex === 0 ? blogs[0] : null;
+  res.render("create.ejs", { blog: blogToEdit, editMode: isEdit });
+});
+
+app.post("/create", isLoggedIn, (req, res) => {
+  const blogData = {
+    title: req.body["title"],
+    content: req.body["content"],
+    tags: req.body["tags"],
+    summary: req.body["excerpt"],
+    p_date: req.body["publish_date"],
+    author: req.session.user.email,
+  };
+
+  if (req.session.latestBlogIndex === 0 && blogs.length > 0) {
+    blogs[0] = blogData;
+  } else {
+    blogs.unshift(blogData);
+    req.session.latestBlogIndex = 0;
+  }
+
+  res.render("options.ejs", { latestBlog: blogData });
+});
+
+app.get("/browsepost", (req, res) => {
+  res.render("browsepost.ejs", {
+    blogs: blogs,
+    userEmail: req.session.user ? req.session.user.email : null,
+    dummy_blogs: dummyBlogs,
+  });
+});
+
+app.post("/delete/:index", isLoggedIn, (req, res) => {
+  const index = parseInt(req.params.index);
+  if (
+    !isNaN(index) &&
+    index >= 0 &&
+    index < blogs.length &&
+    blogs[index].author === req.session.user.email
+  ) {
+    blogs.splice(index, 1);
+  }
+  res.redirect("/browsepost");
+});
+
+app.get("/edit", isLoggedIn, (req, res) => {
+  const index = req.session.latestBlogIndex;
+  if (index === undefined || index !== 0) {
+    return res.send("Edit not allowed. You can only edit your latest blog.");
+  }
+
+  const blogToEdit = blogs[0];
+  res.render("edit.ejs", { blog: blogToEdit });
+});
+
+app.post("/edit", isLoggedIn, (req, res) => {
+  const index = req.session.latestBlogIndex;
+  if (index !== 0) {
+    return res.send("Editing old blog is not allowed.");
+  }
+
+  blogs[0] = {
+    title: req.body["title"],
+    content: req.body["content"],
+    tags: req.body["tags"],
+    summary: req.body["excerpt"],
+    p_date: req.body["publish_date"],
+    author: req.session.user.email,
+  };
+
+  res.redirect("/browsepost");
+});
+
+app.get("/about", (req, res) => {
+  res.render("about.ejs");
+});
+
+// Prevent multiple logins
+app.get("/sign_in", (req, res) => {
+  if (req.session.user) return res.redirect("/create");
+  res.render("sign_in.ejs", { error: null });
+});
+
+app.post("/sign_in", (req, res) => {
+  const { email, password } = req.body;
+  const user = users[email];
+
+  if (!user || user.password !== password) {
+    return res.render("sign_in.ejs", { error: "Invalid credentials. Please try again." });
+  }
+
+  req.session.user = { email };
+  res.redirect("/create");
+});
+
+app.get("/sign_up", (req, res) => {
+  if (req.session.user) return res.redirect("/create");
+  res.render("sign_up.ejs");
+});
+
+app.post("/sign_up", (req, res) => {
+  const { username, email, password, confirm_password } = req.body;
+  if (password !== confirm_password) {
+    return res.send("Passwords do not match.");
+  }
+
+  if (users[email]) {
+    return res.send("Account already exists. Please sign in.");
+  }
+
+  users[email] = { password };
+  req.session.user = { email };
+  res.redirect("/create");
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}.`);
+});
