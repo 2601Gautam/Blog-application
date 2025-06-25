@@ -39,9 +39,6 @@ app.get("/create", (req, res) => {
 });
  let blogs = [];
 app.post("/create",(req,res) => {
-    if (!req.session.user) {
-    return res.redirect("/sign_in");
-  }
     const blogData = {
     title: req.body["title"],
     content: req.body["content"],
